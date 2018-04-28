@@ -50,6 +50,7 @@
 #include <net/net_namespace.h>
 #include <net/netns/generic.h>
 #include <net/rtnetlink.h>
+#include <net/gre.h>
 
 #include <net/ipv6.h>
 #include <net/ip6_fib.h>
