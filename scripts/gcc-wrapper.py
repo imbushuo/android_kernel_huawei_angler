@@ -1,4 +1,4 @@
-#! /usr/bin/env python
+#! /usr/bin/env python2
 # -*- coding: utf-8 -*-
 
 # Copyright (c) 2011-2012, The Linux Foundation. All rights reserved.
@@ -62,15 +62,15 @@ def interpret_warning(line):
     line = line.rstrip('\n')
     m = warning_re.match(line)
     if m and m.group(2) not in allowed_warnings:
-        print "error, forbidden warning:", m.group(2)
+        print "warning, forbidden warning:", m.group(2)
 
         # If there is a warning, remove any object if it exists.
-        if ofile:
-            try:
-                os.remove(ofile)
-            except OSError:
-                pass
-        sys.exit(1)
+        #if ofile:
+            #try:
+                #os.remove(ofile)
+            #except OSError:
+                #pass
+        #sys.exit(1)
 
 def run_gcc():
     args = sys.argv[1:]
