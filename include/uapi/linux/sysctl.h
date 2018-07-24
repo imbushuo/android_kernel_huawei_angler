@@ -33,6 +33,10 @@ struct completion;
 				   the largest acceptable value for the nlen
 				   member of a struct __sysctl_args to have? */
 
+/* some borked header define __unused as __attribute__((__unused__)) */
+#ifdef __unused
+#undef __unused
+#endif
 struct __sysctl_args {
 	int __user *name;
 	int nlen;
